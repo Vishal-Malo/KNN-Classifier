@@ -48,12 +48,12 @@ class KNearestNeighbours:
             return self.result_w
 
     def classify(self, distance):
-        label = []
+        lable = []
 
         for i in distance:
-            label.append(self.y_train[i[0]])
+            lable.append(self.y_train[i[0]])
 
-        return Counter(label).most_common()[0][0]
+        return Counter(lable).most_common()[0][0]
 
     def classify2(self, distance):
         y = np.unique(self.y_train)
